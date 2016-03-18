@@ -32,8 +32,6 @@ def oauth_req(url, key, secret, http_method="GET", post_body="", http_headers=No
 home_timeline = oauth_req( 'https://api.twitter.com/1.1/search/tweets.json?q=%22'+sys.argv[1]+'%22&count=1&result_type=recent', '619422408-yPaRg0V77PgbJK1ENvrscuhD8KDKTfo675em1uit', 'kGo6TtddMPgdED45ohrkN5tpZa7gB3q7iFrMIdo61UWOb' )
 
 home=json.loads(home_timeline)
-print sys.argv[1]
-
 
 for key in home['statuses'] : 
     print (key['user']['name']),":",(key['text'].encode("utf-8"))
