@@ -1,3 +1,23 @@
+#Write a simple python program ( function )  that returns a random tweet based on 'keyword' search. Your program should accept the 'keyword' as a param to your python function.
+#
+#Eg:
+#prompt: <name-of-your-code> <keyword>
+#@username: tweet that contains <keyword>
+#media: <link> ( if any )
+#
+#Deadline: 1 Week
+#Submission guideline:
+#
+#- Share a git-hub repo with us with your code
+#- Must have instructions on how to run the code
+#- You may only use the libraries listed below:
+#
+#Search API: https://dev.twitter.com/rest/public/search
+#Python OAuth Lib: https://github.com/joestump/python-oauth2
+#Python HTTP Lib: https://pypi.python.org/pypi/requests
+#Python Standard Library:  https://docs.python.org/3.5/library/
+
+
 import sys
 import oauth2
 import urllib,json
@@ -13,12 +33,14 @@ home_timeline = oauth_req( 'https://api.twitter.com/1.1/search/tweets.json?q=%22
 #print json.dumps(home_timeline)
 
 home=json.loads(home_timeline)
-#home=json.loads(home['statuses'][''])
-#print home['statuses']
+#home=json.loads(home['statuses'])
 
-str=home['statuses'][0]
+#print home['statuses'][0]
+for key in home['statuses'] : 
+#    for i in key:
+#        print i;
+    print (key['user']['name']),":",(key['text'].encode("utf-8"))
+#          .encode("utf-8"));
+#str=home['statuses']
 #print home
-print str['metadata']
-    
-    
-    
+#print str['metadata']
