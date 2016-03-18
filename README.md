@@ -24,6 +24,5 @@ Keywords - Tweet - Python
 Running Example : 
 
 $ py tweet.py soccer
-soccer
 kjo : RT @G_Buchholz: PSA: today is the tenth anniversary of the greatest soccer girl movie ever made #shestheman @SoccerGrlProbs https://t.co/taΓÇª
 Media :  http://pbs.twimg.com/media/CdvlJz0WwAAvk0Q.jpg
