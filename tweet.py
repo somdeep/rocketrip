@@ -30,17 +30,9 @@ def oauth_req(url, key, secret, http_method="GET", post_body="", http_headers=No
     return content
  
 home_timeline = oauth_req( 'https://api.twitter.com/1.1/search/tweets.json?q=%22manchester+united%22&count=1&result_type=recent', '619422408-yPaRg0V77PgbJK1ENvrscuhD8KDKTfo675em1uit', 'kGo6TtddMPgdED45ohrkN5tpZa7gB3q7iFrMIdo61UWOb' )
-#print json.dumps(home_timeline)
 
 home=json.loads(home_timeline)
-#home=json.loads(home['statuses'])
 
-#print home['statuses'][0]
 for key in home['statuses'] : 
-#    for i in key:
-#        print i;
     print (key['user']['name']),":",(key['text'].encode("utf-8"))
 #          .encode("utf-8"));
-#str=home['statuses']
-#print home
-#print str['metadata']
